@@ -1,4 +1,4 @@
-# Kmer histogram data from test samples #
+# Kmer histogram data for the development of depth coverage function in PreseqR #
 
 ##Purpose##
 
@@ -6,7 +6,7 @@ Kmer histogram data was generated in order to extend the the Rational Function A
 
 ## Data ##
 
-I calculated Kmer histograms for 12 of the 14 datasets in the Nonpareil paper (Rodriguez-R and Konstantinidis, 2014) and three well-characterized metagenome datasets from  Alanysis work at the Joint Genome Institute (JGI).
+I calculated Kmer histograms for 12 of the 14 datasets in the Nonpareil paper (Rodriguez-R and Konstantinidis, 2014) and three well-characterized metagenome datasets from the Joint Genome Institute (JGI).
 
 Data |  Description
 --- | ---
@@ -28,7 +28,7 @@ SRR096386.fastq.gz   | Biosample SRA029309.1 Lake Lanier LL_S1
 
 ##Methods##
 
-For each dataset, I have placed 31-mer count histograms are in the directory  `k31counts`. These data were generated using the [Bbtools](https://sourceforge.net/projects/bbmap/) package `kmercountexact.sh` with the exception of  `6558.7.47340.GTGAAA.fastq.gz` which could not be calculated exactly on a 248GB memory node and had to be estimated using Bbtools package program `khist.sh` which uses a bloom filter for approximate kmer counting.
+For each dataset, I have placed 31-mer count histograms are in the directory `k31counts`. These data were generated using the [Bbtools](https://sourceforge.net/projects/bbmap/) package program `kmercountexact.sh`. A kmer histogram could not be calulated exactly for the high complexity sample `6558.7.47340.GTGAAA.fastq.gz` on a 248GB memory node and had to be estimated using Bbtools package program `khist.sh` which uses a Bloom filter for approximate kmer counting. The three JGI samples are 2x150 base pair illumina libraries with a 270 base pair tareget insert size.
 
 ---
 
