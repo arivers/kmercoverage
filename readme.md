@@ -2,7 +2,7 @@
 
 ##Purpose##
 
-Kmer histogram data was generated in order to extend the the Rational Function Approximation (RFA) approach to used by Preseq (Daley and Smith, 2013)  and PreseqR (Deng et al., 2015)  to estimate sequence coverage ad a function of total sequencing. The software packages Nonpareil (Rodriguez-R and Konstantinidis, 2014) and KmerSpectrumAnalyzer (Williams et al., 2013) perform related estimates, but RFA may make the approach more accurate and scalable.
+Kmer histogram data was generated in order to extend the the Rational Function Approximation (RFA) approach to used by Preseq (Daley and Smith, 2013)  and PreseqR (Deng et al., 2015)  to estimate sequence coverage as a function of total sequencing. The software packages Nonpareil (Rodriguez-R and Konstantinidis, 2014) and KmerSpectrumAnalyzer (Williams et al., 2013) perform related estimates, but RFA may make the approach more accurate and scalable.
 
 ## Data ##
 
@@ -28,7 +28,7 @@ SRR096386.fastq.gz   | Biosample SRA029309.1 Lake Lanier LL_S1
 
 ##Methods##
 
-For each dataset, I have placed 31-mer count histograms are in the directory `k31counts`. These data were generated using the [Bbtools](https://sourceforge.net/projects/bbmap/) package program `kmercountexact.sh`. A kmer histogram could not be calulated exactly for the high complexity sample `6558.7.47340.GTGAAA.fastq.gz` on a 248GB memory node and had to be estimated using Bbtools package program `khist.sh` which uses a Bloom filter for approximate kmer counting. The three JGI samples are 2x150 base pair illumina libraries with a 270 base pair tareget insert size.
+For each dataset, I have placed 31-mer count histograms are in the directory `k31counts`. These data were generated using the [Bbtools](https://sourceforge.net/projects/bbmap/) package program `kmercountexact.sh`. A kmer histogram could not be calulated exactly for the high complexity sample `6558.7.47340.GTGAAA.fastq.gz` on a 248GB memory node and had to be estimated using Bbtools package program `khist.sh`, which uses a Bloom filter for approximate kmer counting. The three JGI samples are 2x150 base pair illumina libraries with a 270 base pair tareget insert size.
 
 ---
 
