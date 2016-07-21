@@ -1,0 +1,15 @@
+SRR061157.fastq.gz
+SRR061189.fastq.gz
+SRR062429.fastq.gz
+SRR062436.fastq.gz
+SRR062519.fastq.gz
+SRR346700.fastq.gz
+SRR948155.fastq.gz
+mgm4477807.fastq.gz
+SRR512581.fastq.gz
+SRR512766.fastq.gz
+SRR096387.fastq.gz
+SRR096386.fastq.gz
+/global/dna/dm_archive/sdm/illumina/00/65/58/6558.7.47340.GTGAAA.fastq.gz
+/global/dna/dm_archive/sdm/illumina/00/88/52/8852.1.113741.GTAGAG.fastq.gz
+/global/dna/dm_archive/sdm/illumina/00/67/35/6735.7.52359.AGTTCC.fastq.gz

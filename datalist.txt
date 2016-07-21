@@ -1,0 +1,15 @@
+data/SRR061157.fastq.gz	Biosample SRS016335  Human stool
+data/SRR061189.fastq.gz	Biosample SRS063417 Posterior fornix
+data/SRR062429.fastq.gz	Biosample SRS019087 Human buccal mucosa
+data/SRR062436.fastq.gz	Biosample SRS019087 Human anterior nares
+data/SRR062519.fastq.gz	Biosample SRS015574 supragingival
+data/SRR346700.fastq.gz	Biosample SRS062540 Tounge Dorsum
+data/SRR948155.fastq.gz	Biosample SRP028408 Lake Lanier LL_1007B
+data/mgm4477807.fastq.gz	Biosample PE6 Manu Park (Peru) Tropical Forest
+data/SRR512581.fastq.gz	Biosample SRS345554 Active layer day 2
+data/SRR512766.fastq.gz	Biosample SRS345600 Permafrost layer day 2
+data/SRR096387.fastq.gz	Biosample SRA029314.1  Lake Lanier LL_S2
+data/SRR096386.fastq.gz	Biosample SRA029309.1 Lake Lanier LL_S1
+/global/dna/dm_archive/sdm/illumina/00/65/58/6558.7.47340.GTGAAA.fastq.gz	Wetland Surface Sediment Aug2011 Site B2 Bulk Metagenome
+/global/dna/dm_archive/sdm/illumina/00/88/52/8852.1.113741.GTAGAG.fastq.gz	Crystal Bog metaG CBE16Jul07
+/global/dna/dm_archive/sdm/illumina/00/67/35/6735.7.52359.AGTTCC.fastq.gz	Biofuel Metagenome 4

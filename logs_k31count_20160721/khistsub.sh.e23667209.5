@@ -1,0 +1,27 @@
+java -ea -Xmx207977m -Xms207977m -cp /usr/common/jgi/utilities/bbtools/prod-v36.19/lib/BBTools.jar jgi.KmerCountExact threads=16 in=SRR062519.fastq.gz khist=../../k31counts/SRR062519.hist.txt
+Executing jgi.KmerCountExact [threads=16, in=SRR062519.fastq.gz, khist=../../k31counts/SRR062519.hist.txt]
+
+Set threads to 16
+Initial:
+Memory: max=208993m, free=207903m, used=1090m
+
+Executing kmer.KmerTableSet [threads=16, in=SRR062519.fastq.gz, khist=../../k31counts/SRR062519.hist.txt]
+
+Set threads to 16
+Initial:
+Ways=41, initialSize=128000, prefilter=f, prealloc=f
+Memory: max=208993m, free=207903m, used=1090m
+
+Estimated kmer capacity: 	8136568519
+After table allocation:
+Memory: max=208993m, free=205722m, used=3271m
+
+After loading:
+Memory: max=208993m, free=174385m, used=34608m
+
+Input:                      	29174520 reads 		5834904000 bases.
+
+For K=31
+Unique Kmers:               	1132699579
+Load Time:                  	106.397 seconds.
+Histogram Write Time:       	8.260 seconds.

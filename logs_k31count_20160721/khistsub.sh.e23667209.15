@@ -1,0 +1,27 @@
+java -ea -Xmx210416m -Xms210416m -cp /usr/common/jgi/utilities/bbtools/prod-v36.19/lib/BBTools.jar jgi.KmerCountExact threads=16 in=/global/dna/dm_archive/sdm/illumina/00/67/35/6735.7.52359.AGTTCC.fastq.gz khist=../../k31counts/6735.7.52359.AGTTCC.hist.txt
+Executing jgi.KmerCountExact [threads=16, in=/global/dna/dm_archive/sdm/illumina/00/67/35/6735.7.52359.AGTTCC.fastq.gz, khist=../../k31counts/6735.7.52359.AGTTCC.hist.txt]
+
+Set threads to 16
+Initial:
+Memory: max=211444m, free=210341m, used=1103m
+
+Executing kmer.KmerTableSet [threads=16, in=/global/dna/dm_archive/sdm/illumina/00/67/35/6735.7.52359.AGTTCC.fastq.gz, khist=../../k31counts/6735.7.52359.AGTTCC.hist.txt]
+
+Set threads to 16
+Initial:
+Ways=41, initialSize=128000, prefilter=f, prealloc=f
+Memory: max=211444m, free=210341m, used=1103m
+
+Estimated kmer capacity: 	8232036777
+After table allocation:
+Memory: max=211444m, free=208135m, used=3309m
+
+After loading:
+Memory: max=196122m, free=67687m, used=128435m
+
+Input:                      	348671770 reads 		52300765500 bases.
+
+For K=31
+Unique Kmers:               	7327757919
+Load Time:                  	1679.361 seconds.
+Histogram Write Time:       	50.419 seconds.

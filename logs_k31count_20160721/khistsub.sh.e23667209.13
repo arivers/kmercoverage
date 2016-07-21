@@ -1,0 +1,96 @@
+java -ea -Xmx210545m -Xms210545m -cp /usr/common/jgi/utilities/bbtools/prod-v36.19/lib/BBTools.jar jgi.KmerCountExact threads=16 in=/global/dna/dm_archive/sdm/illumina/00/65/58/6558.7.47340.GTGAAA.fastq.gz khist=../../k31counts/6558.7.47340.GTGAAA.hist.txt
+Executing jgi.KmerCountExact [threads=16, in=/global/dna/dm_archive/sdm/illumina/00/65/58/6558.7.47340.GTGAAA.fastq.gz, khist=../../k31counts/6558.7.47340.GTGAAA.hist.txt]
+
+Set threads to 16
+Initial:
+Memory: max=211574m, free=210470m, used=1104m
+
+Executing kmer.KmerTableSet [threads=16, in=/global/dna/dm_archive/sdm/illumina/00/65/58/6558.7.47340.GTGAAA.fastq.gz, khist=../../k31counts/6558.7.47340.GTGAAA.hist.txt]
+
+Set threads to 16
+Initial:
+Ways=41, initialSize=128000, prefilter=f, prealloc=f
+Memory: max=211574m, free=210470m, used=1104m
+
+Estimated kmer capacity: 	8237080768
+After table allocation:
+Memory: max=211574m, free=208262m, used=3312m
+
+java.lang.OutOfMemoryError: Java heap space
+	at kmer.AbstractKmerTable.allocInt1D(AbstractKmerTable.java:154)
+	at kmer.HashArray1D.resize(HashArray1D.java:150)
+	at kmer.HashArray1D.incrementAndReturnNumCreated(HashArray1D.java:66)
+	at kmer.HashBuffer.dumpBuffer_inner(HashBuffer.java:159)
+	at kmer.HashBuffer.dumpBuffer(HashBuffer.java:139)
+	at kmer.HashBuffer.incrementAndReturnNumCreated(HashBuffer.java:39)
+	at kmer.KmerTableSet$LoadThread.addKmersToTable(KmerTableSet.java:568)
+	at kmer.KmerTableSet$LoadThread.run(KmerTableSet.java:493)
+
+This program ran out of memory.  Try increasing the -Xmx flag and setting prealloc.
+Memory: max=196243m, free=25493m, used=170750m
+java -ea -Xmx210546m -Xms210546m -cp /usr/common/jgi/utilities/bbtools/prod-v36.19/lib/BBTools.jar jgi.KmerNormalize bits=32 ecc=f passes=1 keepall dr=f prefilter hist=stdout minprob=0 minqual=0 mindepth=0 minkmers=1 hashes=3 threads=16 in=/global/dna/dm_archive/sdm/illumina/00/65/58/6558.7.47340.GTGAAA.fastq.gz hist=../../k31counts/6558.7.47340.GTGAAA.hist.txt
+Executing jgi.KmerNormalize [bits=32, ecc=f, passes=1, keepall, dr=f, prefilter, hist=stdout, minprob=0, minqual=0, mindepth=0, minkmers=1, hashes=3, threads=16, in=/global/dna/dm_archive/sdm/illumina/00/65/58/6558.7.47340.GTGAAA.fastq.gz, hist=../../k31counts/6558.7.47340.GTGAAA.hist.txt]
+
+Set threads to 16
+
+Settings:
+threads:          	16
+k:                	31
+deterministic:    	false
+toss error reads: 	false
+passes:           	1
+bits per cell:    	32
+cells:            	25.08B
+hashes:           	3
+prefilter bits:   	2
+prefilter cells:  	216.11B
+prefilter hashes: 	2
+base min quality: 	0
+kmer min prob:    	0.0
+
+target depth:     	100
+min depth:        	0
+max depth:        	100
+min good kmers:   	1
+depth percentile: 	54.0
+ignore dupe kmers:	true
+fix spikes:       	false
+histogram length: 	1048576
+print zero cov:   	false
+
+Made prefilter:   	hashes = 2   	 mem = 50.32 GB   	cells = 216.10B   	used = 24.099%
+Made hash table:  	hashes = 3   	 mem = 93.40 GB   	cells = 25.07B   	used = 22.262%
+
+Estimated kmers of depth 1-3: 	28767172121
+Estimated kmers of depth 4+ : 	1027088526
+Estimated unique kmers:     	29794260647
+
+Table creation time:		2937.270 seconds.
+Table read time: 		1317.059 seconds.   	40001.20 kb/sec
+Total reads in:  		351226404	100.000% Kept
+Total bases in:  		52683960600	100.000% Kept
+Error reads in:  		265321588	75.541%
+Error pairs in:  		144626165	82.355%
+Error type 1:    		254656743	72.505%
+Error type 2:    		10604532 	3.019%
+Error type 3:    		852306   	0.243%
+
+Wrote histogram to ../../k31counts/6558.7.47340.GTGAAA.hist.txt
+Total kmers counted:          	42135997793
+Total unique kmer count:      	30811001797
+Includes forward kmers only.
+The unique kmer estimate can be more accurate than the unique count, if the tables are very full.
+The most accurate value is the greater of the two.
+
+Percent unique:               	73.12%
+Depth average:                	1.37	(unique kmers)
+Depth median:                 	1	(unique kmers)
+Depth standard deviation:     	6.74	(unique kmers)
+
+Depth average:                	34.62	(all kmers)
+Depth median:                 	1	(all kmers)
+Depth standard deviation:     	2008.63	(all kmers)
+
+Approx. read depth median:    	1.25
+
+Total time:      		4261.654 seconds.   	12362.33 kb/sec
