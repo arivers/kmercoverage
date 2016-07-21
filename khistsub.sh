@@ -13,4 +13,4 @@ outfile=`basename $input .fastq.gz`".hist.txt"
 
 #attempt exact count if that fails attempt approximate count
 
-kmercountexact.sh threads=16 in=$input khist=k31counts/$outfile || (khist.sh threads=16 in=$input hist=k31counts/$outfile)
+kmercountexact.sh threads=16 in=$input khist=k31counts/$outfile || (khist.sh threads=16 histcol=2 in=$input hist=k31counts/$outfile)
