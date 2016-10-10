@@ -1,0 +1,28 @@
+java -ea -Xmx209462m -Xms209462m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar jgi.KmerCountExact threads=16 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC06/MC06.fastq.gz khist=preseqtest/MC06.hist.txt
+Executing jgi.KmerCountExact [threads=16, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC06/MC06.fastq.gz, khist=preseqtest/MC06.hist.txt]
+
+Set threads to 16
+Initial:
+Memory: max=210485m, free=204994m, used=5491m
+
+Executing kmer.KmerTableSet [threads=16, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC06/MC06.fastq.gz, khist=preseqtest/MC06.hist.txt]
+
+Set threads to 16
+Initial:
+Ways=41, initialSize=128000, prefilter=f, prealloc=f
+Memory: max=210485m, free=203896m, used=6589m
+
+Estimated kmer capacity: 	8194666314
+After table allocation:
+Memory: max=210485m, free=201699m, used=8786m
+
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+After loading:
+Memory: max=195232m, free=58516m, used=136716m
+
+Input:                      	146706646 reads 		22003418996 bases.
+
+For K=31
+Unique Kmers:               	3849340920
+Load Time:                  	739.607 seconds.
+Histogram Write Time:       	32.334 seconds.

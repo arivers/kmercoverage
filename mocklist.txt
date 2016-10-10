@@ -1,0 +1,4 @@
+/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz
+/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC06/MC06.fastq.gz
+/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC13/MC13.fastq.gz
+/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC39/MC39.fastq.gz
