@@ -1,0 +1,92 @@
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102277m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.483293024 usejni=t pigz=t threads=8 covhist=MC04.0.483293024..cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.483293024, usejni=t, pigz=t, threads=8, covhist=MC04.0.483293024..cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.402 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	18.183 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.483293024..cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	15.183 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.991 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	71955908	(10792868382 bases)
+
+Mapping:          	5266.645 seconds.
+Reads/sec:       	13662.57
+kBases/sec:      	2049.29
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6194% 	 34761684 	 96.6240% 	 10428505200
+bad pairs:       	  0.5088% 	   183053 	  0.5088% 	    54915900
+insert size avg: 	  278.73
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5550% 	 35458055 	 98.5550% 	  5318708250
+unambiguous:     	 96.5254% 	 34727861 	 96.5254% 	  5209179150
+ambiguous:       	  2.0296% 	   730194 	  2.0296% 	   109529100
+low-Q discards:  	  0.0108% 	     3891 	  0.0108% 	      583650
+
+perfect best site:	 52.4947% 	 18886525 	 52.4947% 	  2832978750
+semiperfect site:	 52.6807% 	 18953421 	 52.6807% 	  2843013150
+rescued:         	  0.7254% 	   260986
+
+Match Rate:      	      NA 	       NA 	 96.9585% 	  5238903211
+Error Rate:      	 46.4674% 	 16476452 	  2.9688% 	   160411866
+Sub Rate:        	 46.3745% 	 16443498 	  1.3600% 	    73485934
+Del Rate:        	  1.1640% 	   412735 	  1.5645% 	    84535118
+Ins Rate:        	  1.5129% 	   536438 	  0.0442% 	     2390814
+N Rate:          	  0.6206% 	   220045 	  0.0727% 	     3928291
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8409% 	 35201164 	 97.8409% 	  5279664134
+unambiguous:     	 95.8272% 	 34476658 	 95.8270% 	  5170992884
+ambiguous:       	  2.0137% 	   724506 	  2.0139% 	   108671250
+low-Q discards:  	  0.4641% 	   166978 	  0.4641% 	    25042942
+
+perfect best site:	 55.3714% 	 19921481 	 55.3714% 	  2987935204
+semiperfect site:	 55.5589% 	 19988960 	 55.5589% 	  2998056572
+rescued:         	  0.9235% 	   332244
+
+Match Rate:      	      NA 	       NA 	 96.7205% 	  5193912374
+Error Rate:      	 43.1241% 	 15180200 	  3.2028% 	   171991362
+Sub Rate:        	 43.0280% 	 15146360 	  1.4776% 	    79347964
+Del Rate:        	  1.0987% 	   386757 	  1.6826% 	    90355602
+Ins Rate:        	  1.9374% 	   681998 	  0.0426% 	     2287796
+N Rate:          	  0.6074% 	   213809 	  0.0766% 	     4116000
+
+Average coverage:                    	3.32
+Standard deviation:                    	10.12
+Percent scaffolds with any coverage: 	97.18
+Percent of reference bases covered:  	47.95
+
+Total time:     	5374.271 seconds.

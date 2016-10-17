@@ -16,8 +16,9 @@ p <- add_argument(p, "--input", help="two column histogram input", type="charact
 p <- add_argument(p, "--plotname", help="Base filename for plot, no ending", default="kmercoverage")
 p <- add_argument(p, "--plottype", help="format for plot", default="pdf")
 p <- add_argument(p, "--points", help="The number of points to evaluate coverage over", default=100)
-p <- add_argument(p, "--reads", help="The number of reads in the sample",type="numeric")
-p <- add_argument(p, "--coverage", help="The coverage depth to evaluate, a vector of positive integers >= 2", nargs=Inf, default=c(2,3,10,30))
+p <- add_argument(p, "--bases", help="The number of bases in the sample",type="numeric")
+p <- add_argument(p, "--coverage", help="The coverage depth to evaluate, a vector of positive integers >= 2",nargs=Inf, type="numeric")
+
 
 # Parse the command line arguments
 args <- parse_args(p)
@@ -29,22 +30,23 @@ logspace <- function( d1, d2, n){
   exp(log(10)*seq(log10(d1), log10(d2), length.out=n)) 
 }
 
-# create a list of log spaced points to evaluate
-create.size.GB <- function(reads,points){
-  min=reads/10000
-  points=logspace(min,reads*100,points)/1E9
+# create a list of log spaced points around the sequencing depth of the sample (in bases)
+create.size<- function(bases,points){
+  min=bases/10000
+  points=logspace(min,bases*100,points)
   return(points)
 }
 
-frac.curve <-function (n, N, seq.size.GB, r = 2, mt = 100) 
+#calulate the fraction of the genome sequenced as a function of the bases sequenced
+frac.curve <-function (n, N, seq.size, r = 2, mt = 100) 
 {
   f <- preseqR.kmer.frac(n, r = r, mt = mt)
   if (is.null(f)) 
     return(NULL)
-  seq.effort <- seq.size.GB * 1e+09/N
+  seq.effort <- seq.size /N
   kmer.frac <- t(sapply(seq.effort, function(x) f(x)))
-  curves <- cbind(seq.size.GB, kmer.frac)
-  colnames(curves) <- c("Gigabases", paste("frac", r, "x", sep = ""))
+  curves <- cbind(seq.size, kmer.frac)
+  colnames(curves) <- c("Bases", paste(r, "x", sep = ""))
   return(curves)
 }
 
@@ -65,14 +67,19 @@ plotkmerwrap<- function(curves, filename, filetype, N){
 }
 
 plotkmer <- function(curves, N){
-  a <- melt(as.data.frame(curves),id="Gigabases")
-  names(a)<-c("Gigabases","Coverage","Fraction")
-  p<-ggplot(a,aes(Gigabases,Fraction, color=Coverage))
-  p + geom_line() + scale_x_log10("Gigabases") + ylab("Fraction of data") + 
-    geom_vline(xintercept= N/1E9) + annotation_logticks(sides="b")
+  a <- longdf(curves)
+  p<-ggplot(a,aes(BasesOfData,ProportionCoveredAtDepth, color=factor(CoverageDepth)))
+  p + geom_line() + scale_x_log10("Bases sequenced") + ylab("Fraction of data > or = depth") + 
+    geom_vline(xintercept= N) + annotation_logticks(sides="b")
   }
 
-
+longdf <- function(curves){
+  a <- melt(as.data.frame(curves),id="Bases")
+  names(a)<-c("BasesOfData","CoverageDepth","ProportionCoveredAtDepth")
+  a$CoverageDepth <- as.numeric(gsub("x","",a$CoverageDepth))
+  a$Type <-rep("PreseqR", dim(a)[1])
+  return(a)
+  }
 # Test run #
 #setwd("~/Documents/kmercoverage")
 #files <- "data/MC04.hist.txt"
@@ -81,15 +88,16 @@ plotkmer <- function(curves, N){
 
 n <- read.table(args$input, sep="\t")
 
-size.GB <- create.size.GB(reads=args$reads,points=args$points)
-curves <-frac.curve(n=n, N=args$reads, seq.size.GB=size.GB, r=args$coverage)
+size <- create.size(bases=args$bases,points=args$points)
+curves <-frac.curve(n=n, N=args$bases, seq.size=size, r=as.vector(args$coverage))
 if(args$json==TRUE){
   library(jsonlite)
-  jdat <- toJSON(as.data.frame(curves))
+  a <- longdf(curves)
+  jdat <- toJSON(as.data.frame(a))
   print(jdat)
 }
 
 if (args$plot==TRUE){
   library(ggplot2)
-  plotkmerwrap(curves, args$plotname , filetype=args$plottype , N=args$reads)
+  plotkmerwrap(curves, args$plotname , filetype=args$plottype , N=args$bases)
 }

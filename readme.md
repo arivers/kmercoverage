@@ -11,7 +11,7 @@ I calculated Kmer histograms for 12 of the 14 datasets in the Nonpareil paper (R
 Data |  Description
 --- | ---
 SRR061157.fastq.gz | Biosample SRS016335  Human stool
-SRR061189.fastq.g | Biosample SRS063417 Posterior fornix
+SRR061189.fastq.gz | Biosample SRS063417 Posterior fornix
 SRR062429.fastq.gz | Biosample SRS019087 Human buccal mucosa
 SRR062436.fastq.gz | Biosample SRS019087 Human anterior nares
 SRR062519.fastq.gz | Biosample SRS015574 supragingival
@@ -25,11 +25,31 @@ SRR096386.fastq.gz   | Biosample SRA029309.1 Lake Lanier LL_S1
 6558.7.47340.GTGAAA.fastq.gz | Wetland Surface Sediment Aug2011 Site B2 Bulk Metagenome (high complexity)
 8852.1.113741.GTAGAG.fastq.gz | Crystal Bog metaG CBE16Jul07 (medium complexity)
 6735.7.52359.AGTTCC.fastq.gz | Biofuel Metagenome 4 (low complexity)
+MC04.fastq.gz | Mock metagenome 04 ( a mix of ~800 isolate genome fastq reads)
+MC06.fastq.gz | Mock metagenome 06 ( a mix of ~800 isolate genome fastq reads)
+MC13.fastq.gz | Mock metagenome 13 ( a mix of ~800 isolate genome fastq reads)
+MC39.fastq.gz | Mock metagenome 39 ( a mix of ~800 isolate genome fastq reads)
 
 ##Methods##
 
+###Generating kmer histogram data ###
 For each dataset, I have placed 31-mer count histograms are in the directory `k31counts`. These data were generated using the [Bbtools](https://sourceforge.net/projects/bbmap/) package program `kmercountexact.sh`. A kmer histogram could not be calulated exactly for the high complexity sample `6558.7.47340.GTGAAA.fastq.gz` on a 248GB memory node and had to be estimated using Bbtools package program `khist.sh`, which uses a Bloom filter for approximate kmer counting. The three JGI samples are 2x150 base pair illumina libraries with a 270 base pair tareget insert size.
 
+###Validation with mock metaenome###
+The 31mer histograms were calulated for the four mock communities as described above.
+MC04 was selected for further testing. The file was subsamples at 20 logrithmically distributed depths 100% -0.1% with bbmap. An Rscript was written to use PreseqR to generate a JSON of the extimated coverage depth from the 31mer histogram (covverage_est.R).  That R script is called by the python script "coverageparser.py", which loads the mapping data runs coverage_est.R and combines the data into one graph.
+
+###Dependencies###
+coverage_est.R 
+- PreseqR prerelease from [their github repo](https://github.com/smithlabcode/preseqR) (you may need the R devtools package to do this.
+- R package reshape2
+- R package argparser
+coverageparser.py
+- ggplot python package
+
+## Current Status ##
+The preseqR estimates of coverage based on 31 Mers  do not currently agree with the predictions from PreseqR.
+![Comparison of PreseqR preditions to mapping based coverage](MC04.svg)  
 ---
 
 ###References###

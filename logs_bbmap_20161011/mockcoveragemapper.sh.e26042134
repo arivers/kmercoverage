@@ -1,0 +1,1643 @@
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102256m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 ref=stdin.fasta
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, ref=stdin.fasta]
+
+BBMap version 36.44
+Retaining first best site only for ambiguous mappings.
+No output file.
+Writing reference.
+Executing dna.FastaToChromArrays2 [stdin.fasta, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=true, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=false]
+
+Set genScaffoldInfo=true
+Writing chunk 1
+Writing chunk 2
+Writing chunk 3
+Writing chunk 4
+Writing chunk 5
+Writing chunk 6
+Set genome to 1
+
+Loaded Reference:	0.114 seconds.
+Loading index for chunk 1-6, build 1
+No index available; generating from reference genome: /global/projectb/scratch/arrivers/kmercoverage/ref/index/1/chr1-3_index_k13_c2_b1.block
+No index available; generating from reference genome: /global/projectb/scratch/arrivers/kmercoverage/ref/index/1/chr4-6_index_k13_c2_b1.block
+Indexing threads started for block 4-6
+Indexing threads started for block 0-3
+Indexing threads finished for block 0-3
+Indexing threads finished for block 4-6
+Generated Index:	205.013 seconds.
+Finished Writing:	8.037 seconds.
+No reads to process; quitting.
+
+Total time:     	266.223 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102273m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.001000000 usejni=t pigz=t threads=8 covhist=MC04.0.001000000.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.001000000, usejni=t, pigz=t, threads=8, covhist=MC04.0.001000000.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.557 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	12.300 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.001000000.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	17.413 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	1.070 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	148362	(22253312 bases)
+
+Mapping:          	242.334 seconds.
+Reads/sec:       	612.22
+kBases/sec:      	91.83
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6595% 	    71703 	 96.6638% 	    21510900
+bad pairs:       	  0.5069% 	      376 	  0.5069% 	      112800
+insert size avg: 	  276.82
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5279% 	    73089 	 98.5279% 	    10963350
+unambiguous:     	 96.4762% 	    71567 	 96.4762% 	    10735050
+ambiguous:       	  2.0517% 	     1522 	  2.0517% 	      228300
+low-Q discards:  	  0.0121% 	        9 	  0.0121% 	        1350
+
+perfect best site:	 52.7804% 	    39153 	 52.7804% 	     5872950
+semiperfect site:	 52.9893% 	    39308 	 52.9893% 	     5896200
+rescued:         	  0.9463% 	      702
+
+Match Rate:      	      NA 	       NA 	 96.2684% 	    10798124
+Error Rate:      	 46.1205% 	    33709 	  3.6564% 	      410128
+Sub Rate:        	 46.0316% 	    33644 	  1.3517% 	      151612
+Del Rate:        	  1.2026% 	      879 	  2.2585% 	      253331
+Ins Rate:        	  1.4558% 	     1064 	  0.0462% 	        5185
+N Rate:          	  0.6636% 	      485 	  0.0751% 	        8429
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8822% 	    72610 	 97.8821% 	    10890520
+unambiguous:     	 95.8439% 	    71098 	 95.8437% 	    10663726
+ambiguous:       	  2.0383% 	     1512 	  2.0384% 	      226794
+low-Q discards:  	  0.4125% 	      306 	  0.4125% 	       45894
+
+perfect best site:	 55.7178% 	    41332 	 55.7179% 	     6199266
+semiperfect site:	 55.9038% 	    41470 	 55.9039% 	     6219964
+rescued:         	  1.2025% 	      892
+
+Match Rate:      	      NA 	       NA 	 97.1415% 	    10713259
+Error Rate:      	 42.7971% 	    31075 	  2.7831% 	      306930
+Sub Rate:        	 42.7214% 	    31020 	  1.4901% 	      164337
+Del Rate:        	  1.0550% 	      766 	  1.2512% 	      137984
+Ins Rate:        	  1.9157% 	     1391 	  0.0418% 	        4609
+N Rate:          	  0.6156% 	      447 	  0.0754% 	        8315
+
+Average coverage:                    	0.01
+Standard deviation:                    	0.10
+Percent scaffolds with any coverage: 	28.31
+Percent of reference bases covered:  	0.56
+
+Total time:     	319.552 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102295m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.001438450 usejni=t pigz=t threads=8 covhist=MC04.0.001438450.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.001438450, usejni=t, pigz=t, threads=8, covhist=MC04.0.001438450.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.292 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	11.881 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.001438450.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.238 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.881 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	214414	(32160536 bases)
+
+Mapping:          	243.181 seconds.
+Reads/sec:       	881.70
+kBases/sec:      	132.25
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.7493% 	   103722 	 96.7540% 	    31116600
+bad pairs:       	  0.4925% 	      528 	  0.4925% 	      158400
+insert size avg: 	  277.97
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.6055% 	   105712 	 98.6055% 	    15856800
+unambiguous:     	 96.5478% 	   103506 	 96.5478% 	    15525900
+ambiguous:       	  2.0577% 	     2206 	  2.0577% 	      330900
+low-Q discards:  	  0.0103% 	       11 	  0.0103% 	        1650
+
+perfect best site:	 52.7158% 	    56515 	 52.7158% 	     8477250
+semiperfect site:	 52.8967% 	    56709 	 52.8967% 	     8506350
+rescued:         	  0.9290% 	      996
+
+Match Rate:      	      NA 	       NA 	 97.1632% 	    15620282
+Error Rate:      	 46.2795% 	    48923 	  2.7643% 	      444394
+Sub Rate:        	 46.1868% 	    48825 	  1.3572% 	      218180
+Del Rate:        	  1.1569% 	     1223 	  1.3655% 	      219528
+Ins Rate:        	  1.4975% 	     1583 	  0.0416% 	        6686
+N Rate:          	  0.5941% 	      628 	  0.0725% 	       11652
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.9358% 	   104994 	 97.9357% 	    15747550
+unambiguous:     	 95.9079% 	   102820 	 95.9077% 	    15421462
+ambiguous:       	  2.0279% 	     2174 	  2.0280% 	      326088
+low-Q discards:  	  0.4487% 	      481 	  0.4487% 	       72144
+
+perfect best site:	 55.7342% 	    59751 	 55.7344% 	     8961798
+semiperfect site:	 55.9152% 	    59945 	 55.9153% 	     8990898
+rescued:         	  1.2527% 	     1343
+
+Match Rate:      	      NA 	       NA 	 96.5382% 	    15494583
+Error Rate:      	 42.8282% 	    44967 	  3.3901% 	      544123
+Sub Rate:        	 42.7329% 	    44867 	  1.4638% 	      234939
+Del Rate:        	  1.1220% 	     1178 	  1.8857% 	      302652
+Ins Rate:        	  1.9153% 	     2011 	  0.0407% 	        6532
+N Rate:          	  0.5753% 	      604 	  0.0716% 	       11496
+
+Average coverage:                    	0.01
+Standard deviation:                    	0.12
+Percent scaffolds with any coverage: 	32.72
+Percent of reference bases covered:  	0.81
+
+Total time:     	332.596 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102295m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.002069138 usejni=t pigz=t threads=8 covhist=MC04.0.002069138.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.002069138, usejni=t, pigz=t, threads=8, covhist=MC04.0.002069138.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.102 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	12.366 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.002069138.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.386 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.899 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	306332	(45947634 bases)
+
+Mapping:          	243.158 seconds.
+Reads/sec:       	1259.81
+kBases/sec:      	188.96
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6285% 	   148002 	 96.6330% 	    44400600
+bad pairs:       	  0.4805% 	      736 	  0.4805% 	      220800
+insert size avg: 	  279.71
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5395% 	   150929 	 98.5395% 	    22639350
+unambiguous:     	 96.4966% 	   147800 	 96.4966% 	    22170000
+ambiguous:       	  2.0429% 	     3129 	  2.0429% 	      469350
+low-Q discards:  	  0.0157% 	       24 	  0.0157% 	        3600
+
+perfect best site:	 52.6377% 	    80623 	 52.6377% 	    12093450
+semiperfect site:	 52.8179% 	    80899 	 52.8179% 	    12134850
+rescued:         	  0.9389% 	     1438
+
+Match Rate:      	      NA 	       NA 	 97.1660% 	    22299321
+Error Rate:      	 46.3205% 	    69911 	  2.7617% 	      633806
+Sub Rate:        	 46.2356% 	    69783 	  1.3653% 	      313332
+Del Rate:        	  1.1562% 	     1745 	  1.3523% 	      310359
+Ins Rate:        	  1.5477% 	     2336 	  0.0441% 	       10115
+N Rate:          	  0.6261% 	      945 	  0.0723% 	       16582
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8109% 	   149813 	 97.8108% 	    22469818
+unambiguous:     	 95.7908% 	   146719 	 95.7907% 	    22005734
+ambiguous:       	  2.0200% 	     3094 	  2.0202% 	      464084
+low-Q discards:  	  0.5047% 	      773 	  0.5047% 	      115932
+
+perfect best site:	 55.3543% 	    84784 	 55.3542% 	    12716380
+semiperfect site:	 55.5450% 	    85076 	 55.5449% 	    12760176
+rescued:         	  1.1654% 	     1785
+
+Match Rate:      	      NA 	       NA 	 96.1589% 	    22103871
+Error Rate:      	 43.1178% 	    64596 	  3.7609% 	      864502
+Sub Rate:        	 43.0243% 	    64456 	  1.4696% 	      337808
+Del Rate:        	  1.0874% 	     1629 	  2.2491% 	      516994
+Ins Rate:        	  1.9511% 	     2923 	  0.0422% 	        9700
+N Rate:          	  0.6081% 	      911 	  0.0802% 	       18439
+
+Average coverage:                    	0.01
+Standard deviation:                    	0.14
+Percent scaffolds with any coverage: 	37.38
+Percent of reference bases covered:  	1.14
+
+Total time:     	326.704 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102298m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.002976351 usejni=t pigz=t threads=8 covhist=MC04.0.002976351.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.002976351, usejni=t, pigz=t, threads=8, covhist=MC04.0.002976351.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.218 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	12.866 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.002976351.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.338 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.913 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	442472	(66367556 bases)
+
+Mapping:          	242.338 seconds.
+Reads/sec:       	1825.85
+kBases/sec:      	273.86
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6976% 	   213930 	 96.7024% 	    64179000
+bad pairs:       	  0.4900% 	     1084 	  0.4900% 	      325200
+insert size avg: 	  278.66
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5992% 	   218137 	 98.5992% 	    32720550
+unambiguous:     	 96.5697% 	   213647 	 96.5697% 	    32047050
+ambiguous:       	  2.0295% 	     4490 	  2.0295% 	      673500
+low-Q discards:  	  0.0054% 	       12 	  0.0054% 	        1800
+
+perfect best site:	 52.7758% 	   116759 	 52.7758% 	    17513850
+semiperfect site:	 52.9498% 	   117144 	 52.9498% 	    17571600
+rescued:         	  0.8999% 	     1991
+
+Match Rate:      	      NA 	       NA 	 97.0013% 	    32230718
+Error Rate:      	 46.2058% 	   100792 	  2.9265% 	      972393
+Sub Rate:        	 46.1224% 	   100610 	  1.3559% 	      450529
+Del Rate:        	  1.1502% 	     2509 	  1.5246% 	      506565
+Ins Rate:        	  1.5128% 	     3300 	  0.0460% 	       15299
+N Rate:          	  0.6051% 	     1320 	  0.0722% 	       24004
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8692% 	   216522 	 97.8691% 	    32475094
+unambiguous:     	 95.8506% 	   212056 	 95.8504% 	    31805224
+ambiguous:       	  2.0187% 	     4466 	  2.0188% 	      669870
+low-Q discards:  	  0.4565% 	     1010 	  0.4565% 	      151478
+
+perfect best site:	 55.6749% 	   123173 	 55.6747% 	    18474068
+semiperfect site:	 55.8697% 	   123604 	 55.8695% 	    18538714
+rescued:         	  1.1562% 	     2558
+
+Match Rate:      	      NA 	       NA 	 97.1448% 	    31947616
+Error Rate:      	 42.8183% 	    92711 	  2.7744% 	      912402
+Sub Rate:        	 42.7333% 	    92527 	  1.4807% 	      486950
+Del Rate:        	  1.0576% 	     2290 	  1.2513% 	      411511
+Ins Rate:        	  1.9236% 	     4165 	  0.0424% 	       13941
+N Rate:          	  0.6226% 	     1348 	  0.0808% 	       26587
+
+Average coverage:                    	0.02
+Standard deviation:                    	0.18
+Percent scaffolds with any coverage: 	42.46
+Percent of reference bases covered:  	1.61
+
+Total time:     	328.979 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102302m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.004281332 usejni=t pigz=t threads=8 covhist=MC04.0.004281332.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.004281332, usejni=t, pigz=t, threads=8, covhist=MC04.0.004281332.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.168 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	12.136 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.004281332.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.365 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.707 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	635170	(95271046 bases)
+
+Mapping:          	245.650 seconds.
+Reads/sec:       	2585.67
+kBases/sec:      	387.83
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6507% 	   306948 	 96.6552% 	    92084400
+bad pairs:       	  0.4962% 	     1576 	  0.4963% 	      472800
+insert size avg: 	  278.99
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5535% 	   312991 	 98.5535% 	    46948650
+unambiguous:     	 96.5436% 	   306608 	 96.5436% 	    45991200
+ambiguous:       	  2.0099% 	     6383 	  2.0099% 	      957450
+low-Q discards:  	  0.0129% 	       41 	  0.0129% 	        6150
+
+perfect best site:	 52.4836% 	   166680 	 52.4836% 	    25002000
+semiperfect site:	 52.6659% 	   167259 	 52.6659% 	    25088850
+rescued:         	  0.8517% 	     2705
+
+Match Rate:      	      NA 	       NA 	 96.5724% 	    46241698
+Error Rate:      	 46.4774% 	   145470 	  3.3538% 	     1605914
+Sub Rate:        	 46.3745% 	   145148 	  1.3575% 	      650031
+Del Rate:        	  1.1428% 	     3577 	  1.9512% 	      934278
+Ins Rate:        	  1.5355% 	     4806 	  0.0451% 	       21605
+N Rate:          	  0.6253% 	     1957 	  0.0738% 	       35316
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8538% 	   310769 	 97.8537% 	    46610950
+unambiguous:     	 95.8698% 	   304468 	 95.8696% 	    45665842
+ambiguous:       	  1.9840% 	     6301 	  1.9841% 	      945108
+low-Q discards:  	  0.4528% 	     1438 	  0.4528% 	      215676
+
+perfect best site:	 55.1959% 	   175294 	 55.1959% 	    26291634
+semiperfect site:	 55.3867% 	   175900 	 55.3867% 	    26382528
+rescued:         	  1.1225% 	     3565
+
+Match Rate:      	      NA 	       NA 	 96.7929% 	    45851942
+Error Rate:      	 43.3016% 	   134568 	  3.1293% 	     1482366
+Sub Rate:        	 43.2025% 	   134260 	  1.4810% 	      701581
+Del Rate:        	  1.0960% 	     3406 	  1.6048% 	      760216
+Ins Rate:        	  1.9587% 	     6087 	  0.0434% 	       20569
+N Rate:          	  0.6226% 	     1935 	  0.0778% 	       36858
+
+Average coverage:                    	0.03
+Standard deviation:                    	0.22
+Percent scaffolds with any coverage: 	48.09
+Percent of reference bases covered:  	2.25
+
+Total time:     	335.849 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102297m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.006158482 usejni=t pigz=t threads=8 covhist=MC04.0.006158482.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.006158482, usejni=t, pigz=t, threads=8, covhist=MC04.0.006158482.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.870 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	11.976 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.006158482.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.137 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.953 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	917934	(137683290 bases)
+
+Mapping:          	243.989 seconds.
+Reads/sec:       	3762.20
+kBases/sec:      	564.30
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.5910% 	   443321 	 96.5958% 	   132996300
+bad pairs:       	  0.4987% 	     2289 	  0.4988% 	      686700
+insert size avg: 	  278.49
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5334% 	   452236 	 98.5334% 	    67835400
+unambiguous:     	 96.4845% 	   442832 	 96.4845% 	    66424800
+ambiguous:       	  2.0489% 	     9404 	  2.0489% 	     1410600
+low-Q discards:  	  0.0102% 	       47 	  0.0102% 	        7050
+
+perfect best site:	 52.5125% 	   241015 	 52.5125% 	    36152250
+semiperfect site:	 52.6870% 	   241816 	 52.6870% 	    36272400
+rescued:         	  0.8362% 	     3838
+
+Match Rate:      	      NA 	       NA 	 96.8791% 	    66817376
+Error Rate:      	 46.4453% 	   210043 	  3.0509% 	     2104213
+Sub Rate:        	 46.3545% 	   209632 	  1.3605% 	      938346
+Del Rate:        	  1.1658% 	     5272 	  1.6449% 	     1134451
+Ins Rate:        	  1.5147% 	     6850 	  0.0456% 	       31416
+N Rate:          	  0.6174% 	     2792 	  0.0700% 	       48262
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8099% 	   448915 	 97.8098% 	    67330538
+unambiguous:     	 95.7790% 	   439594 	 95.7788% 	    65932452
+ambiguous:       	  2.0309% 	     9321 	  2.0310% 	     1398086
+low-Q discards:  	  0.4654% 	     2136 	  0.4654% 	      320346
+
+perfect best site:	 55.4201% 	   254360 	 55.4199% 	    38150082
+semiperfect site:	 55.6033% 	   255201 	 55.6031% 	    38276226
+rescued:         	  1.0369% 	     4759
+
+Match Rate:      	      NA 	       NA 	 97.0510% 	    66235192
+Error Rate:      	 43.0516% 	   193265 	  2.8720% 	     1960081
+Sub Rate:        	 42.9591% 	   192850 	  1.4840% 	     1012764
+Del Rate:        	  1.1011% 	     4943 	  1.3441% 	      917294
+Ins Rate:        	  1.9612% 	     8804 	  0.0440% 	       30023
+N Rate:          	  0.6057% 	     2719 	  0.0770% 	       52559
+
+Average coverage:                    	0.04
+Standard deviation:                    	0.27
+Percent scaffolds with any coverage: 	53.77
+Percent of reference bases covered:  	3.12
+
+Total time:     	337.539 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102300m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.008858668 usejni=t pigz=t threads=8 covhist=MC04.0.008858668.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.008858668, usejni=t, pigz=t, threads=8, covhist=MC04.0.008858668.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.237 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	10.564 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.008858668.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.197 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.892 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	1319642	(197936774 bases)
+
+Mapping:          	246.620 seconds.
+Reads/sec:       	5350.90
+kBases/sec:      	802.60
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6224% 	   637535 	 96.6271% 	   191260500
+bad pairs:       	  0.5200% 	     3431 	  0.5200% 	     1029300
+insert size avg: 	  278.76
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5260% 	   650095 	 98.5260% 	    97514250
+unambiguous:     	 96.5092% 	   636788 	 96.5092% 	    95518200
+ambiguous:       	  2.0168% 	    13307 	  2.0168% 	     1996050
+low-Q discards:  	  0.0109% 	       72 	  0.0109% 	       10800
+
+perfect best site:	 52.5030% 	   346426 	 52.5030% 	    51963900
+semiperfect site:	 52.6857% 	   347631 	 52.6857% 	    52144650
+rescued:         	  0.7942% 	     5240
+
+Match Rate:      	      NA 	       NA 	 97.0560% 	    96048784
+Error Rate:      	 46.4430% 	   301924 	  2.8702% 	     2840396
+Sub Rate:        	 46.3465% 	   301297 	  1.3642% 	     1350002
+Del Rate:        	  1.1517% 	     7487 	  1.4632% 	     1447967
+Ins Rate:        	  1.5005% 	     9755 	  0.0429% 	       42427
+N Rate:          	  0.6234% 	     4053 	  0.0738% 	       73037
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8709% 	   645773 	 97.8708% 	    96856536
+unambiguous:     	 95.8565% 	   632481 	 95.8563% 	    94862826
+ambiguous:       	  2.0145% 	    13292 	  2.0146% 	     1993710
+low-Q discards:  	  0.4445% 	     2933 	  0.4445% 	      439888
+
+perfect best site:	 55.4190% 	   365666 	 55.4190% 	    54844694
+semiperfect site:	 55.6028% 	   366879 	 55.6029% 	    55026632
+rescued:         	  0.9942% 	     6560
+
+Match Rate:      	      NA 	       NA 	 96.7236% 	    95281574
+Error Rate:      	 43.0946% 	   278293 	  3.1989% 	     3151180
+Sub Rate:        	 42.9934% 	   277640 	  1.4773% 	     1455240
+Del Rate:        	  1.0982% 	     7092 	  1.6776% 	     1652593
+Ins Rate:        	  1.9490% 	    12586 	  0.0440% 	       43347
+N Rate:          	  0.6157% 	     3976 	  0.0775% 	       76375
+
+Average coverage:                    	0.06
+Standard deviation:                    	0.34
+Percent scaffolds with any coverage: 	59.00
+Percent of reference bases covered:  	4.28
+
+Total time:     	339.784 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102298m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.012742750 usejni=t pigz=t threads=8 covhist=MC04.0.012742750.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.012742750, usejni=t, pigz=t, threads=8, covhist=MC04.0.012742750.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.160 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	11.929 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.012742750.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.240 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.947 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	1897300	(284580924 bases)
+
+Mapping:          	245.270 seconds.
+Reads/sec:       	7735.56
+kBases/sec:      	1160.28
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6199% 	   916585 	 96.6247% 	   274975500
+bad pairs:       	  0.5091% 	     4830 	  0.5092% 	     1449000
+insert size avg: 	  278.65
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5686% 	   935071 	 98.5686% 	   140260650
+unambiguous:     	 96.5636% 	   916051 	 96.5636% 	   137407650
+ambiguous:       	  2.0050% 	    19020 	  2.0050% 	     2853000
+low-Q discards:  	  0.0096% 	       91 	  0.0096% 	       13650
+
+perfect best site:	 52.5265% 	   498293 	 52.5265% 	    74743950
+semiperfect site:	 52.7110% 	   500043 	 52.7110% 	    75006450
+rescued:         	  0.7503% 	     7118
+
+Match Rate:      	      NA 	       NA 	 97.1244% 	   138155721
+Error Rate:      	 46.4498% 	   434339 	  2.8027% 	     3986690
+Sub Rate:        	 46.3560% 	   433462 	  1.3634% 	     1939376
+Del Rate:        	  1.1724% 	    10963 	  1.3958% 	     1985522
+Ins Rate:        	  1.5123% 	    14141 	  0.0434% 	       61792
+N Rate:          	  0.6164% 	     5764 	  0.0729% 	      103761
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8237% 	   928005 	 97.8237% 	   139186878
+unambiguous:     	 95.8341% 	   909130 	 95.8339% 	   136355754
+ambiguous:       	  1.9897% 	    18875 	  1.9898% 	     2831124
+low-Q discards:  	  0.4706% 	     4464 	  0.4706% 	      669516
+
+perfect best site:	 55.3358% 	   524943 	 55.3358% 	    78733672
+semiperfect site:	 55.5105% 	   526600 	 55.5105% 	    78982210
+rescued:         	  0.9578% 	     9086
+
+Match Rate:      	      NA 	       NA 	 96.6245% 	   136926796
+Error Rate:      	 43.1621% 	   400546 	  3.2989% 	     4674927
+Sub Rate:        	 43.0641% 	   399637 	  1.4761% 	     2091744
+Del Rate:        	  1.1088% 	    10290 	  1.7807% 	     2523373
+Ins Rate:        	  1.9265% 	    17878 	  0.0422% 	       59810
+N Rate:          	  0.6027% 	     5593 	  0.0766% 	      108528
+
+Average coverage:                    	0.09
+Standard deviation:                    	0.43
+Percent scaffolds with any coverage: 	64.48
+Percent of reference bases covered:  	5.79
+
+Total time:     	341.832 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102300m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.018329807 usejni=t pigz=t threads=8 covhist=MC04.0.018329807.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.018329807, usejni=t, pigz=t, threads=8, covhist=MC04.0.018329807.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.080 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	12.285 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.018329807.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.274 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.897 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	2728872	(409311226 bases)
+
+Mapping:          	258.868 seconds.
+Reads/sec:       	10541.57
+kBases/sec:      	1581.16
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6214% 	  1318337 	 96.6260% 	   395501100
+bad pairs:       	  0.5056% 	     6899 	  0.5057% 	     2069700
+insert size avg: 	  278.76
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5467% 	  1344606 	 98.5467% 	   201690900
+unambiguous:     	 96.5438% 	  1317279 	 96.5438% 	   197591850
+ambiguous:       	  2.0028% 	    27327 	  2.0028% 	     4099050
+low-Q discards:  	  0.0114% 	      156 	  0.0114% 	       23400
+
+perfect best site:	 52.4272% 	   715336 	 52.4272% 	   107300400
+semiperfect site:	 52.6085% 	   717809 	 52.6085% 	   107671350
+rescued:         	  0.7443% 	    10155
+
+Match Rate:      	      NA 	       NA 	 97.1557% 	   198654615
+Error Rate:      	 46.5320% 	   625672 	  2.7712% 	     5666191
+Sub Rate:        	 46.4381% 	   624409 	  1.3673% 	     2795798
+Del Rate:        	  1.1707% 	    15741 	  1.3594% 	     2779555
+Ins Rate:        	  1.5178% 	    20409 	  0.0444% 	       90838
+N Rate:          	  0.6158% 	     8280 	  0.0732% 	      149649
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8448% 	  1335030 	 97.8448% 	   200235250
+unambiguous:     	 95.8626% 	  1307984 	 95.8624% 	   196178498
+ambiguous:       	  1.9822% 	    27046 	  1.9823% 	     4056752
+low-Q discards:  	  0.4728% 	     6451 	  0.4728% 	      967474
+
+perfect best site:	 55.2776% 	   754228 	 55.2776% 	   113123262
+semiperfect site:	 55.4553% 	   756652 	 55.4552% 	   113486836
+rescued:         	  0.9435% 	    12873
+
+Match Rate:      	      NA 	       NA 	 96.7707% 	   196976005
+Error Rate:      	 43.2361% 	   577215 	  3.1558% 	     6423570
+Sub Rate:        	 43.1421% 	   575961 	  1.4845% 	     3021783
+Del Rate:        	  1.0991% 	    14673 	  1.6281% 	     3313947
+Ins Rate:        	  1.9494% 	    26025 	  0.0432% 	       87840
+N Rate:          	  0.5940% 	     7930 	  0.0735% 	      149622
+
+Average coverage:                    	0.13
+Standard deviation:                    	0.55
+Percent scaffolds with any coverage: 	69.75
+Percent of reference bases covered:  	7.69
+
+Total time:     	357.357 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102299m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.026366509 usejni=t pigz=t threads=8 covhist=MC04.0.026366509.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.026366509, usejni=t, pigz=t, threads=8, covhist=MC04.0.026366509.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.223 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	11.338 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.026366509.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.278 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.921 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	3926974	(589017688 bases)
+
+Mapping:          	296.656 seconds.
+Reads/sec:       	13237.49
+kBases/sec:      	1985.53
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6072% 	  1896870 	 96.6119% 	   569061000
+bad pairs:       	  0.5019% 	     9854 	  0.5019% 	     2956200
+insert size avg: 	  278.71
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5526% 	  1935067 	 98.5526% 	   290260050
+unambiguous:     	 96.5370% 	  1895492 	 96.5370% 	   284323800
+ambiguous:       	  2.0155% 	    39575 	  2.0155% 	     5936250
+low-Q discards:  	  0.0102% 	      200 	  0.0102% 	       30000
+
+perfect best site:	 52.4798% 	  1030434 	 52.4798% 	   154565100
+semiperfect site:	 52.6612% 	  1033995 	 52.6612% 	   155099250
+rescued:         	  0.7316% 	    14365
+
+Match Rate:      	      NA 	       NA 	 96.9106% 	   285899141
+Error Rate:      	 46.4845% 	   899507 	  3.0177% 	     8902696
+Sub Rate:        	 46.3907% 	   897692 	  1.3622% 	     4018610
+Del Rate:        	  1.1575% 	    22399 	  1.6112% 	     4753256
+Ins Rate:        	  1.5156% 	    29328 	  0.0443% 	      130830
+N Rate:          	  0.6101% 	    11806 	  0.0717% 	      211469
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8241% 	  1920764 	 97.8241% 	   288086600
+unambiguous:     	 95.8246% 	  1881503 	 95.8244% 	   282197752
+ambiguous:       	  1.9996% 	    39261 	  1.9996% 	     5888848
+low-Q discards:  	  0.4700% 	     9229 	  0.4700% 	     1384148
+
+perfect best site:	 55.3269% 	  1086337 	 55.3270% 	   162935012
+semiperfect site:	 55.5118% 	  1089967 	 55.5119% 	   163479488
+rescued:         	  0.9361% 	    18380
+
+Match Rate:      	      NA 	       NA 	 96.7172% 	   283400121
+Error Rate:      	 43.1557% 	   828920 	  3.2061% 	     9394379
+Sub Rate:        	 43.0570% 	   827024 	  1.4801% 	     4337030
+Del Rate:        	  1.1019% 	    21164 	  1.6834% 	     4932759
+Ins Rate:        	  1.9342% 	    37152 	  0.0425% 	      124590
+N Rate:          	  0.6119% 	    11753 	  0.0767% 	      224859
+
+Average coverage:                    	0.18
+Standard deviation:                    	0.73
+Percent scaffolds with any coverage: 	74.65
+Percent of reference bases covered:  	10.06
+
+Total time:     	396.245 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102302m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.037926902 usejni=t pigz=t threads=8 covhist=MC04.0.037926902.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.037926902, usejni=t, pigz=t, threads=8, covhist=MC04.0.037926902.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.626 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	12.526 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.037926902.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.292 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.939 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	5647986	(847157518 bases)
+
+Mapping:          	404.695 seconds.
+Reads/sec:       	13956.14
+kBases/sec:      	2093.32
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6265% 	  2728725 	 96.6311% 	   818617500
+bad pairs:       	  0.4975% 	    14050 	  0.4975% 	     4215000
+insert size avg: 	  278.93
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5624% 	  2783395 	 98.5624% 	   417509250
+unambiguous:     	 96.5431% 	  2726369 	 96.5431% 	   408955350
+ambiguous:       	  2.0193% 	    57026 	  2.0193% 	     8553900
+low-Q discards:  	  0.0095% 	      269 	  0.0095% 	       40350
+
+perfect best site:	 52.5288% 	  1483409 	 52.5288% 	   222511350
+semiperfect site:	 52.7119% 	  1488579 	 52.7119% 	   223286850
+rescued:         	  0.7339% 	    20725
+
+Match Rate:      	      NA 	       NA 	 96.9657% 	   411263069
+Error Rate:      	 46.4367% 	  1292517 	  2.9617% 	    12561468
+Sub Rate:        	 46.3457% 	  1289984 	  1.3568% 	     5754624
+Del Rate:        	  1.1551% 	    32150 	  1.5616% 	     6623411
+Ins Rate:        	  1.4993% 	    41731 	  0.0432% 	      183433
+N Rate:          	  0.6206% 	    17273 	  0.0726% 	      308124
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8296% 	  2762700 	 97.8295% 	   414365176
+unambiguous:     	 95.8239% 	  2706060 	 95.8237% 	   405869572
+ambiguous:       	  2.0057% 	    56640 	  2.0058% 	     8495604
+low-Q discards:  	  0.4697% 	    13264 	  0.4697% 	     1989316
+
+perfect best site:	 55.3641% 	  1563479 	 55.3641% 	   234499474
+semiperfect site:	 55.5494% 	  1568712 	 55.5494% 	   235284382
+rescued:         	  0.9446% 	    26675
+
+Match Rate:      	      NA 	       NA 	 96.6791% 	   407636954
+Error Rate:      	 43.1275% 	  1191486 	  3.2449% 	    13681606
+Sub Rate:        	 43.0309% 	  1188817 	  1.4770% 	     6227594
+Del Rate:        	  1.1020% 	    30445 	  1.7252% 	     7273907
+Ins Rate:        	  1.9308% 	    53341 	  0.0427% 	      180105
+N Rate:          	  0.6121% 	    16910 	  0.0760% 	      320523
+
+Average coverage:                    	0.26
+Standard deviation:                    	0.97
+Percent scaffolds with any coverage: 	79.23
+Percent of reference bases covered:  	12.89
+
+Total time:     	506.569 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102295m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.054555948 usejni=t pigz=t threads=8 covhist=MC04.0.054555948.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.054555948, usejni=t, pigz=t, threads=8, covhist=MC04.0.054555948.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.222 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	10.765 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.054555948.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.249 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.916 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	8122022	(1218244410 bases)
+
+Mapping:          	580.285 seconds.
+Reads/sec:       	13996.61
+kBases/sec:      	2099.39
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6213% 	  3923801 	 96.6260% 	  1177140300
+bad pairs:       	  0.5077% 	    20617 	  0.5077% 	     6185100
+insert size avg: 	  278.77
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5492% 	  4002092 	 98.5492% 	   600313800
+unambiguous:     	 96.5183% 	  3919620 	 96.5183% 	   587943000
+ambiguous:       	  2.0308% 	    82472 	  2.0308% 	    12370800
+low-Q discards:  	  0.0109% 	      443 	  0.0109% 	       66450
+
+perfect best site:	 52.4722% 	  2130902 	 52.4722% 	   319635300
+semiperfect site:	 52.6571% 	  2138411 	 52.6571% 	   320761650
+rescued:         	  0.7325% 	    29748
+
+Match Rate:      	      NA 	       NA 	 96.9715% 	   591301561
+Error Rate:      	 46.4861% 	  1860415 	  2.9563% 	    18026861
+Sub Rate:        	 46.3941% 	  1856735 	  1.3617% 	     8303468
+Del Rate:        	  1.1617% 	    46493 	  1.5505% 	     9454413
+Ins Rate:        	  1.5187% 	    60781 	  0.0441% 	      268980
+N Rate:          	  0.6246% 	    24998 	  0.0721% 	      439791
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8444% 	  3973472 	 97.8443% 	   595962796
+unambiguous:     	 95.8273% 	  3891558 	 95.8271% 	   583676196
+ambiguous:       	  2.0171% 	    81914 	  2.0172% 	    12286600
+low-Q discards:  	  0.4646% 	    18867 	  0.4646% 	     2829596
+
+perfect best site:	 55.3924% 	  2249493 	 55.3925% 	   337391454
+semiperfect site:	 55.5793% 	  2257082 	 55.5793% 	   338529750
+rescued:         	  0.9333% 	    37903
+
+Match Rate:      	      NA 	       NA 	 96.8153% 	   586289761
+Error Rate:      	 43.1085% 	  1712904 	  3.1080% 	    18821528
+Sub Rate:        	 43.0127% 	  1709097 	  1.4783% 	     8952051
+Del Rate:        	  1.0995% 	    43689 	  1.5873% 	     9612493
+Ins Rate:        	  1.9376% 	    76989 	  0.0424% 	      256984
+N Rate:          	  0.6029% 	    23958 	  0.0766% 	      464000
+
+Average coverage:                    	0.38
+Standard deviation:                    	1.32
+Percent scaffolds with any coverage: 	83.42
+Percent of reference bases covered:  	16.25
+
+Total time:     	680.387 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102301m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.078475997 usejni=t pigz=t threads=8 covhist=MC04.0.078475997.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.078475997, usejni=t, pigz=t, threads=8, covhist=MC04.0.078475997.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.181 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	12.490 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.078475997.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.247 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.918 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	11669318	(1750313706 bases)
+
+Mapping:          	848.706 seconds.
+Reads/sec:       	13749.55
+kBases/sec:      	2062.33
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6254% 	  5637764 	 96.6301% 	  1691329200
+bad pairs:       	  0.5053% 	    29480 	  0.5053% 	     8844000
+insert size avg: 	  278.81
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5610% 	  5750700 	 98.5610% 	   862605000
+unambiguous:     	 96.5419% 	  5632889 	 96.5419% 	   844933350
+ambiguous:       	  2.0192% 	   117811 	  2.0192% 	    17671650
+low-Q discards:  	  0.0106% 	      616 	  0.0106% 	       92400
+
+perfect best site:	 52.5041% 	  3063433 	 52.5041% 	   459514950
+semiperfect site:	 52.6907% 	  3074323 	 52.6907% 	   461148450
+rescued:         	  0.7252% 	    42313
+
+Match Rate:      	      NA 	       NA 	 96.9880% 	   849675158
+Error Rate:      	 46.4624% 	  2671913 	  2.9400% 	    25756588
+Sub Rate:        	 46.3700% 	  2666598 	  1.3600% 	    11914439
+Del Rate:        	  1.1620% 	    66825 	  1.5361% 	    13457047
+Ins Rate:        	  1.5059% 	    86601 	  0.0440% 	      385102
+N Rate:          	  0.6180% 	    35542 	  0.0719% 	      630301
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8401% 	  5708637 	 97.8400% 	   856212750
+unambiguous:     	 95.8384% 	  5591845 	 95.8382% 	   838694694
+ambiguous:       	  2.0017% 	   116792 	  2.0018% 	    17518056
+low-Q discards:  	  0.4620% 	    26957 	  0.4620% 	     4042930
+
+perfect best site:	 55.3741% 	  3230888 	 55.3741% 	   484586592
+semiperfect site:	 55.5611% 	  3241801 	 55.5611% 	   486223454
+rescued:         	  0.9272% 	    54099
+
+Match Rate:      	      NA 	       NA 	 96.7599% 	   842327995
+Error Rate:      	 43.1223% 	  2461698 	  3.1646% 	    27549093
+Sub Rate:        	 43.0285% 	  2456345 	  1.4765% 	    12853438
+Del Rate:        	  1.0981% 	    62686 	  1.6451% 	    14321359
+Ins Rate:        	  1.9471% 	   111154 	  0.0430% 	      374296
+N Rate:          	  0.6007% 	    34291 	  0.0755% 	      657021
+
+Average coverage:                    	0.54
+Standard deviation:                    	1.81
+Percent scaffolds with any coverage: 	86.85
+Percent of reference bases covered:  	20.09
+
+Total time:     	952.279 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102299m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.112883789 usejni=t pigz=t threads=8 covhist=MC04.0.112883789.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.112883789, usejni=t, pigz=t, threads=8, covhist=MC04.0.112883789.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.713 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	12.437 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.112883789.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.114 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.927 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	16810724	(2521487654 bases)
+
+Mapping:          	1174.597 seconds.
+Reads/sec:       	14311.90
+kBases/sec:      	2146.68
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6203% 	  8121290 	 96.6250% 	  2436387000
+bad pairs:       	  0.5064% 	    42566 	  0.5064% 	    12769800
+insert size avg: 	  278.72
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5553% 	  8283933 	 98.5553% 	  1242589950
+unambiguous:     	 96.5292% 	  8113628 	 96.5292% 	  1217044200
+ambiguous:       	  2.0261% 	   170305 	  2.0261% 	    25545750
+low-Q discards:  	  0.0106% 	      887 	  0.0106% 	      133050
+
+perfect best site:	 52.5222% 	  4414685 	 52.5222% 	   662202750
+semiperfect site:	 52.7061% 	  4430141 	 52.7061% 	   664521150
+rescued:         	  0.7235% 	    60810
+
+Match Rate:      	      NA 	       NA 	 96.9237% 	  1223950886
+Error Rate:      	 46.4394% 	  3847011 	  3.0039% 	    37933705
+Sub Rate:        	 46.3462% 	  3839288 	  1.3596% 	    17169367
+Del Rate:        	  1.1647% 	    96486 	  1.6003% 	    20208904
+Ins Rate:        	  1.5033% 	   124534 	  0.0440% 	      555434
+N Rate:          	  0.6208% 	    51429 	  0.0724% 	      914263
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8375% 	  8223595 	 97.8374% 	  1233419988
+unambiguous:     	 95.8272% 	  8054619 	 95.8270% 	  1208074638
+ambiguous:       	  2.0103% 	   168976 	  2.0104% 	    25345350
+low-Q discards:  	  0.4619% 	    38826 	  0.4619% 	     5823048
+
+perfect best site:	 55.3675% 	  4653843 	 55.3676% 	   698009764
+semiperfect site:	 55.5521% 	  4669358 	 55.5522% 	   700336910
+rescued:         	  0.9241% 	    77675
+
+Match Rate:      	      NA 	       NA 	 96.7670% 	  1213404750
+Error Rate:      	 43.1285% 	  3546711 	  3.1574% 	    39592227
+Sub Rate:        	 43.0332% 	  3538875 	  1.4781% 	    18535144
+Del Rate:        	  1.1006% 	    90507 	  1.6368% 	    20524517
+Ins Rate:        	  1.9362% 	   159227 	  0.0425% 	      532566
+N Rate:          	  0.6022% 	    49524 	  0.0756% 	      947528
+
+Average coverage:                    	0.78
+Standard deviation:                    	2.52
+Percent scaffolds with any coverage: 	89.72
+Percent of reference bases covered:  	24.53
+
+Total time:     	1277.585 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102300m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.162377674 usejni=t pigz=t threads=8 covhist=MC04.0.162377674.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.162377674, usejni=t, pigz=t, threads=8, covhist=MC04.0.162377674.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	6.471 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	11.842 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.162377674.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.111 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.971 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	24175812	(3626197644 bases)
+
+Mapping:          	1686.628 seconds.
+Reads/sec:       	14333.82
+kBases/sec:      	2149.97
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6220% 	 11679582 	 96.6267% 	  3503874600
+bad pairs:       	  0.5061% 	    61177 	  0.5061% 	    18353100
+insert size avg: 	  278.75
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5541% 	 11913123 	 98.5541% 	  1786968450
+unambiguous:     	 96.5315% 	 11668643 	 96.5315% 	  1750296450
+ambiguous:       	  2.0225% 	   244480 	  2.0225% 	    36672000
+low-Q discards:  	  0.0110% 	     1332 	  0.0110% 	      199800
+
+perfect best site:	 52.5048% 	  6346726 	 52.5048% 	   952008900
+semiperfect site:	 52.6884% 	  6368925 	 52.6884% 	   955338750
+rescued:         	  0.7241% 	    87526
+
+Match Rate:      	      NA 	       NA 	 96.9512% 	  1760162629
+Error Rate:      	 46.4587% 	  5534681 	  2.9761% 	    54032330
+Sub Rate:        	 46.3671% 	  5523767 	  1.3594% 	    24679731
+Del Rate:        	  1.1643% 	   138700 	  1.5723% 	    28545762
+Ins Rate:        	  1.5159% 	   180586 	  0.0444% 	      806837
+N Rate:          	  0.6202% 	    73889 	  0.0727% 	     1319253
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8400% 	 11826804 	 97.8399% 	  1773848952
+unambiguous:     	 95.8288% 	 11583690 	 95.8286% 	  1737383394
+ambiguous:       	  2.0112% 	   243114 	  2.0113% 	    36465558
+low-Q discards:  	  0.4645% 	    56154 	  0.4645% 	     8421880
+
+perfect best site:	 55.3531% 	  6691035 	 55.3531% 	  1003558790
+semiperfect site:	 55.5404% 	  6713675 	 55.5404% 	  1006954630
+rescued:         	  0.9227% 	   111538
+
+Match Rate:      	      NA 	       NA 	 96.7326% 	  1745059836
+Error Rate:      	 43.1437% 	  5102522 	  3.1911% 	    57566787
+Sub Rate:        	 43.0476% 	  5091161 	  1.4766% 	    26638073
+Del Rate:        	  1.0965% 	   129679 	  1.6716% 	    30155359
+Ins Rate:        	  1.9447% 	   229992 	  0.0429% 	      773355
+N Rate:          	  0.6056% 	    71622 	  0.0764% 	     1377688
+
+Average coverage:                    	1.12
+Standard deviation:                    	3.54
+Percent scaffolds with any coverage: 	92.11
+Percent of reference bases covered:  	29.58
+
+Total time:     	1790.233 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102302m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.233572147 usejni=t pigz=t threads=8 covhist=MC04.0.233572147.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.233572147, usejni=t, pigz=t, threads=8, covhist=MC04.0.233572147.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.440 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	12.719 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.233572147.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.094 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.671 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	34777630	(5216394036 bases)
+
+Mapping:          	2437.878 seconds.
+Reads/sec:       	14265.53
+kBases/sec:      	2139.73
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6160% 	 16800377 	 96.6206% 	  5040113100
+bad pairs:       	  0.5063% 	    88046 	  0.5064% 	    26413800
+insert size avg: 	  278.77
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5527% 	 17137154 	 98.5527% 	  2570573100
+unambiguous:     	 96.5210% 	 16783855 	 96.5210% 	  2517578250
+ambiguous:       	  2.0318% 	   353299 	  2.0318% 	    52994850
+low-Q discards:  	  0.0108% 	     1885 	  0.0108% 	      282750
+
+perfect best site:	 52.4718% 	  9124222 	 52.4718% 	  1368633300
+semiperfect site:	 52.6557% 	  9156208 	 52.6557% 	  1373431200
+rescued:         	  0.7279% 	   126579
+
+Match Rate:      	      NA 	       NA 	 96.9841% 	  2532005865
+Error Rate:      	 46.4909% 	  7967213 	  2.9435% 	    76847977
+Sub Rate:        	 46.3979% 	  7951283 	  1.3606% 	    35521192
+Del Rate:        	  1.1660% 	   199827 	  1.5387% 	    40171443
+Ins Rate:        	  1.5155% 	   259712 	  0.0443% 	     1155342
+N Rate:          	  0.6200% 	   106251 	  0.0724% 	     1890701
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8364% 	 17012593 	 97.8363% 	  2551642122
+unambiguous:     	 95.8178% 	 16661584 	 95.8176% 	  2498993042
+ambiguous:       	  2.0186% 	   351009 	  2.0187% 	    52649080
+low-Q discards:  	  0.4653% 	    80910 	  0.4653% 	    12134636
+
+perfect best site:	 55.3549% 	  9625568 	 55.3550% 	  1443697000
+semiperfect site:	 55.5433% 	  9658324 	 55.5433% 	  1448610160
+rescued:         	  0.9267% 	   161140
+
+Match Rate:      	      NA 	       NA 	 96.7073% 	  2510206066
+Error Rate:      	 43.1367% 	  7338666 	  3.2157% 	    83470077
+Sub Rate:        	 43.0394% 	  7322118 	  1.4765% 	    38325639
+Del Rate:        	  1.0997% 	   187082 	  1.6963% 	    44031526
+Ins Rate:        	  1.9377% 	   329661 	  0.0429% 	     1112912
+N Rate:          	  0.6103% 	   103836 	  0.0770% 	     1997505
+
+Average coverage:                    	1.61
+Standard deviation:                    	5.01
+Percent scaffolds with any coverage: 	94.41
+Percent of reference bases covered:  	35.27
+
+Total time:     	2540.477 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102302m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.335981829 usejni=t pigz=t threads=8 covhist=MC04.0.335981829.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.335981829, usejni=t, pigz=t, threads=8, covhist=MC04.0.335981829.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Set genome to 1
+
+Loaded Reference:	5.075 seconds.
+Loading index for chunk 1-6, build 1
+Generated Index:	11.035 seconds.
+Executing jgi.CoveragePileup [covhist=MC04.0.335981829.0.cov.txt, covstats=null, basecov=null, bincov=null, physcov=false, 32bit=false, nzo=false, twocolumn=false, secondary=false, covminscaf=0, ksb=true, binsize=1000, startcov=false, strandedcov=false, rpkm=null, normcov=null, normcovo=null, in1=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz]
+
+Set NONZERO_ONLY to false
+Set TWOCOLUMN to false
+Set USE_SECONDARY_ALIGNMENTS to false
+Set KEEP_SHORT_BINS to true
+Set USE_COVERAGE_ARRAYS to true
+Set USE_BITSETS to false
+Analyzed Index:   	16.211 seconds.
+Changed from ASCII-33 to ASCII-64 on input quality 98 while prescanning.
+Cleared Memory:    	0.712 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 8 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.56
+Mapping Mode:         	normal
+Reads Used:           	50024758	(7503353652 bases)
+
+Mapping:          	3488.108 seconds.
+Reads/sec:       	14341.52
+kBases/sec:      	2151.12
+
+
+Pairing data:   	pct reads	num reads 	pct bases	   num bases
+
+mated pairs:     	 96.6154% 	 24165798 	 96.6200% 	  7249739400
+bad pairs:       	  0.5090% 	   127301 	  0.5090% 	    38190300
+insert size avg: 	  278.81
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 98.5497% 	 24649633 	 98.5497% 	  3697444950
+unambiguous:     	 96.5245% 	 24143068 	 96.5245% 	  3621460200
+ambiguous:       	  2.0253% 	   506565 	  2.0253% 	    75984750
+low-Q discards:  	  0.0106% 	     2645 	  0.0106% 	      396750
+
+perfect best site:	 52.4926% 	 13129642 	 52.4926% 	  1969446300
+semiperfect site:	 52.6789% 	 13176239 	 52.6789% 	  1976435850
+rescued:         	  0.7220% 	   180587
+
+Match Rate:      	      NA 	       NA 	 96.9468% 	  3641942364
+Error Rate:      	 46.4657% 	 11453626 	  2.9800% 	   111948671
+Sub Rate:        	 46.3724% 	 11430630 	  1.3601% 	    51092217
+Del Rate:        	  1.1663% 	   287500 	  1.5757% 	    59194375
+Ins Rate:        	  1.5142% 	   373238 	  0.0442% 	     1662079
+N Rate:          	  0.6222% 	   153374 	  0.0732% 	     2748290
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	 97.8381% 	 24471624 	 97.8380% 	  3670388652
+unambiguous:     	 95.8251% 	 23968133 	 95.8249% 	  3594868188
+ambiguous:       	  2.0130% 	   503491 	  2.0131% 	    75520464
+low-Q discards:  	  0.4638% 	   116004 	  0.4638% 	    17397996
+
+perfect best site:	 55.3560% 	 13845861 	 55.3560% 	  2076679988
+semiperfect site:	 55.5453% 	 13893198 	 55.5453% 	  2083780238
+rescued:         	  0.9225% 	   230751
+
+Match Rate:      	      NA 	       NA 	 96.7413% 	  3610714300
+Error Rate:      	 43.1366% 	 10556219 	  3.1815% 	   118744881
+Sub Rate:        	 43.0395% 	 10532464 	  1.4789% 	    55196028
+Del Rate:        	  1.0983% 	   268780 	  1.6599% 	    61952858
+Ins Rate:        	  1.9409% 	   474976 	  0.0428% 	     1595995
+N Rate:          	  0.6106% 	   149417 	  0.0772% 	     2882329
+
+Average coverage:                    	2.31
+Standard deviation:                    	7.10
+Percent scaffolds with any coverage: 	95.79
+Percent of reference bases covered:  	41.45
+
+Total time:     	3588.784 seconds.
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102320m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.483293024 usejni=t pigz=t threads=8 covhist=MC04.0.483293024.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.483293024, usejni=t, pigz=t, threads=8, covhist=MC04.0.483293024.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Exception in thread "main" java.lang.RuntimeException: Can't find file ref/genome/1/summary.txt
+	at fileIO.ReadWrite.getRawInputStream(ReadWrite.java:818)
+	at fileIO.ReadWrite.getInputStream(ReadWrite.java:783)
+	at fileIO.TextFile.open(TextFile.java:241)
+	at fileIO.TextFile.<init>(TextFile.java:92)
+	at dna.Data.setGenome2(Data.java:824)
+	at dna.Data.setGenome(Data.java:770)
+	at align2.BBMap.loadIndex(BBMap.java:310)
+	at align2.BBMap.main(BBMap.java:31)
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102320m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=.695192796 usejni=t pigz=t threads=8 covhist=MC04.0.695192796.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=.695192796, usejni=t, pigz=t, threads=8, covhist=MC04.0.695192796.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Exception in thread "main" java.lang.RuntimeException: Can't find file ref/genome/1/summary.txt
+	at fileIO.ReadWrite.getRawInputStream(ReadWrite.java:818)
+	at fileIO.ReadWrite.getInputStream(ReadWrite.java:783)
+	at fileIO.TextFile.open(TextFile.java:241)
+	at fileIO.TextFile.<init>(TextFile.java:92)
+	at dna.Data.setGenome2(Data.java:824)
+	at dna.Data.setGenome(Data.java:770)
+	at align2.BBMap.loadIndex(BBMap.java:310)
+	at align2.BBMap.main(BBMap.java:31)
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx102318m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz samplerate=1.000000000 usejni=t pigz=t threads=8 covhist=MC04.1.000000000.0.cov.txt ambiguous=random
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, in=/global/dna/shared/data/functests/assembly/Metagenome/Natalia_mock/MC04/MC04.fastq.gz, samplerate=1.000000000, usejni=t, pigz=t, threads=8, covhist=MC04.1.000000000.0.cov.txt, ambiguous=random]
+
+BBMap version 36.44
+Set threads to 8
+Choosing a site randomly for ambiguous mappings.
+No output file.
+Exception in thread "main" java.lang.RuntimeException: Can't find file ref/genome/1/summary.txt
+	at fileIO.ReadWrite.getRawInputStream(ReadWrite.java:818)
+	at fileIO.ReadWrite.getInputStream(ReadWrite.java:783)
+	at fileIO.TextFile.open(TextFile.java:241)
+	at fileIO.TextFile.<init>(TextFile.java:92)
+	at dna.Data.setGenome2(Data.java:824)
+	at dna.Data.setGenome(Data.java:770)
+	at align2.BBMap.loadIndex(BBMap.java:310)
+	at align2.BBMap.main(BBMap.java:31)

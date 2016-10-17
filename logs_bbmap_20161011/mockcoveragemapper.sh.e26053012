@@ -1,0 +1,31 @@
+java -Djava.library.path=/usr/common/jgi/utilities/bbtools/prod-v36.44/lib -ea -Xmx101111m -cp /usr/common/jgi/utilities/bbtools/prod-v36.44/lib/BBTools.jar align2.BBMap build=1 overwrite=true fastareadlen=500 ref=stdin.fasta
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, ref=stdin.fasta]
+
+BBMap version 36.44
+Retaining first best site only for ambiguous mappings.
+No output file.
+Writing reference.
+Executing dna.FastaToChromArrays2 [stdin.fasta, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=true, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=false]
+
+Set genScaffoldInfo=true
+Writing chunk 1
+Writing chunk 2
+Writing chunk 3
+Writing chunk 4
+Writing chunk 5
+Writing chunk 6
+Set genome to 1
+
+Loaded Reference:	0.266 seconds.
+Loading index for chunk 1-6, build 1
+No index available; generating from reference genome: /global/projectb/scratch/arrivers/kmercoverage/ref/index/1/chr4-6_index_k13_c2_b1.block
+No index available; generating from reference genome: /global/projectb/scratch/arrivers/kmercoverage/ref/index/1/chr1-3_index_k13_c2_b1.block
+Indexing threads started for block 0-3
+Indexing threads started for block 4-6
+Indexing threads finished for block 0-3
+Indexing threads finished for block 4-6
+Generated Index:	267.718 seconds.
+Finished Writing:	8.336 seconds.
+No reads to process; quitting.
+
+Total time:     	353.439 seconds.
