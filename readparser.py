@@ -1,10 +1,9 @@
 #/env/bin/python
-# Scripts to test design the optimal PNA sequence from subsequence
 import argparse
 import os
 import re
 
-parser = argparse.ArgumentParser(description='parse out coverage from btools logs')
+parser = argparse.ArgumentParser(description='parse out coverage from bbtools kmer counting logs')
 parser.add_argument('--input', help="the input direcory containing log files", default = "logs_k31count_20160721")
 parser.add_argument('--out', help="the output report file", type=argparse.FileType('w'), default = '-')
 args = parser.parse_args()
