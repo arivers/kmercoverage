@@ -48,7 +48,7 @@ coverageparser.py
 - ggplot python package
 
 ## Current Status ##
-The preseqR estimates of coverage based on 31 Mers  do not currently agree with the predictions from PreseqR.
+The preseqR estimates of coverage based on 31 Mers do not currently agree with the predictions from mapping. I am investigating the reason for this.
 ![Comparison of PreseqR preditions to mapping based coverage](MC04.png)  
 ---
 
