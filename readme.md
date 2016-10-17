@@ -37,7 +37,7 @@ For each dataset, I have placed 31-mer count histograms are in the directory `k3
 
 ###Validation with mock metaenome###
 The 31mer histograms were calulated for the four mock communities as described above.
-MC04 was selected for further testing. The file was subsamples at 20 logrithmically distributed depths 100% -0.1% with bbmap. An Rscript was written to use PreseqR to generate a JSON of the extimated coverage depth from the 31mer histogram (covverage_est.R).  That R script is called by the python script "coverageparser.py", which loads the mapping data runs coverage_est.R and combines the data into one graph.
+MC04 was selected for further testing. The file was subsampled at 20 logrithmically distributed depths 100% -0.1% with bbmap. An Rscript was written to call PreseqR and generate a JSON of the extimated coverage depth from the 31mer histogram (coverage_est.R).  That R script is called by the python script "coverageparser.py", which loads the mapping data, runs coverage_est.R and combines the data into one graph.
 
 ###Dependencies###
 coverage_est.R 
@@ -49,7 +49,7 @@ coverageparser.py
 
 ## Current Status ##
 The preseqR estimates of coverage based on 31 Mers  do not currently agree with the predictions from PreseqR.
-![Comparison of PreseqR preditions to mapping based coverage](MC04.svg)  
+![Comparison of PreseqR preditions to mapping based coverage](MC04.png)  
 ---
 
 ###References###
