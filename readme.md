@@ -49,7 +49,7 @@ coverageparser.py
 
 ## Comparison to mapping
 The preseqR estimates of coverage based on 31-mers differ from mapping to known genomes in the case of the mock community.  After discussions with several poepel I think this is okay becasue they are measuring different things. The Kmer-based estimate is independent of the number of unique genomes in the metagenome and their abundances. This is desirable becasue small changes in the long tail of low abundace genomes can vastly change the proportion mapped.  Those genomes would however never be assembled either. For estimating assembly completeness the kmer-based method is likely better.    
-![Comparison of PreseqR preditions to mapping based coverage](MC04.png)  
+[Comparison of PreseqR preditions to mapping based coverage](MC04.png)  
 ---
 
 ## Next steps
